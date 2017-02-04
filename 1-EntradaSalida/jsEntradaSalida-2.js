@@ -7,7 +7,7 @@ function Mostar()
     
     nombre= prompt ("");
 
-   nombre="juan";
+  
     alert (nombre);
 }
 
