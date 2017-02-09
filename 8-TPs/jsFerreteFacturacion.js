@@ -5,13 +5,33 @@ C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	
+    var precioUno=parseInt(document.getElementById("PrecioUno").value);
+    var precioDos=parseInt(document.getElementById("PrecioDos").value);
+    var precioTres=parseInt(document.getElementById("PrecioTres").value);
+
+    var suma=(precioUno+precioDos+precioTres);
+    alert("la suma es: "+ suma);
+
 }
 function Promedio () 
 {
+    var precioUno=parseInt(document.getElementById("PrecioUno").value);
+    var precioDos=parseInt(document.getElementById("PrecioDos").value);
+    var precioTres=parseInt(document.getElementById("PrecioTres").value);
+
+    var suma=(precioUno+precioDos+precioTres);
+    var promedio= suma/3;
+    alert(promedio);
 	
 }
 function PrecioFinal () 
 {
-	
+	var precioUno=parseInt(document.getElementById("PrecioUno").value);
+    var precioDos=parseInt(document.getElementById("PrecioDos").value);
+    var precioTres=parseInt(document.getElementById("PrecioTres").value);
+
+    var suma=(precioUno+precioDos+precioTres);
+    var preciofinal= suma*1.21;
+
+    alert (preciofinal);
 }
