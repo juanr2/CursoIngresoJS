@@ -15,24 +15,38 @@ switch (mesDelAño) {
     case "junio":
     alert("A clases");
     break;
-    case "Julio":
-    case "Agosto":
-    case "Septiembre":
-    case "Octubre":
-    case "Noviembre":
-    alert ("Se vienen las vacaciones");
-    break;
-    case ("Diciembre"):
+     case ("Diciembre"):
     alert ("Felices Fiestas");
     break;
-
-
-
-
+    default: 
+    alert ("Se vienen las vacaciones");
+    break;
+    
 
 }
+ /* if (mes=="Enero")
 
+ {
+     alert();
 
+ }
 
+elseif (mes=="Marzo")
 
+{
+    alert();
+}
+
+elseif (mes=="Julio")
+
+{
+
+    alert();
+}
+
+elseif (mes "Diciembre")
+{
+
+    alert ();
+}
 }//FIN DE LA FUNCIÓN
