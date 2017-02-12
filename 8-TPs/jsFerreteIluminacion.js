@@ -8,26 +8,53 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	var cantidad=parseInt(document.getElementById("Cantidad").value);
-    var preciocondescuento;
-
-var marca=document.getElementById("Marca").value;
+function CalcularPrecio() {
+    var cantidad = document.getElementById("Cantidad").value;
+    var preciodescuento;
+    var marca = document.getElementById("Marca").value;
 
 
 
-    if (cantidad>=6)
-
-    {
-        preciocondescuento=(35*cantidad)*0.5;
-        document.getElementById ("precioDescuento").value=preciocondescuento;
+    if (cantidad >= 6) {
+        preciodescuento = (35 * cantidad) * 0.5;
+        document.getElementById("precioDescuento").value = preciodescuento;
     }
-    
-    else if (cantidad==5&&marca=="ArgentinaLuz")
 
-    {
-        preciodescuento=(35*cantidad*0.4);
-        document.getElementById("precioDescuento").value=preciodescuento;
+    else if (cantidad == 5 && marca == "ArgentinaLuz") {
+        preciodescuento = (35 * cantidad * 0.6);
+        document.getElementById("precioDescuento").value = preciodescuento;
     }
+
+    else if (cantidad == 5 && marca != "ArgentinaLuz") {
+
+        preciodescuento = 35 * cantidad * 0.7;
+        document.getElementById("precioDescuento").value = preciodescuento;
+
+    }
+
+    else if (cantidad == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")) {
+        preciodescuento = 35 * cantidad * 0.75;
+        document.getElementById("precioDescuento").value = preciodescuento;
+    }
+
+    else if (cantidad == 4 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas")) {
+        preciodescuento = 35 * cantidad * 0.8;
+        document.getElementById("precioDescuento").value = preciodescuento;
+    }
+    else if (cantidad == 3 && marca == "ArgentinaLuz") {
+        preciodescuento = 35 * cantidad * 0.85;
+        document.getElementById("precioDescuento").value = preciodescuento;
+    }
+    else if (cantidad == 3 && marca == "FelipeLamparas") {
+        preciodescuento = 35 * cantidad * 0.9;
+        document.getElementById("precioDescuento").value = preciodescuento;
+
+    }
+    else if (cantidad == 3 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas")) {
+        preciodescuento = 35 * cantidad * 0.95;
+        document.getElementById("precioDescuento").value = preciodescuento;
+
+    }
+
 }
+
