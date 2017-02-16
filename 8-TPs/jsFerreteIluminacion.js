@@ -12,10 +12,14 @@ function CalcularPrecio() {
     var cantidad = document.getElementById("Cantidad").value;
     var preciodescuento;
     var marca = document.getElementById("Marca").value;
+    var preciofinal;
 
+    
+    
 
-
-    if (cantidad >= 6) {
+    if (cantidad >= 6)
+    
+     {
         preciodescuento = (35 * cantidad) * 0.5;
         document.getElementById("precioDescuento").value = preciodescuento;
     }
@@ -56,5 +60,24 @@ function CalcularPrecio() {
 
     }
 
-}
+     else 
 
+     {
+
+         preciodescuento=35*cantidad;
+         document.getElementById ("precioDescuento").value=preciodescuento
+
+     } 
+                                          
+      
+
+    if (preciodescuento>=120)
+
+    { preciofinal=preciodescuento*1.1;
+      alert ("usted pagó "+ preciofinal);
+       }
+
+
+
+}
+ 
