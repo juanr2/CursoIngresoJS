@@ -1,13 +1,14 @@
 function Mostrar()
 {
+	
+	var numero=prompt("ingrese un numero de 0 a 9");
 
-	var numero = prompt("ingrese un número entre 0 y 10.");
+	while (numero<0||numero>9)
 
-while (numero>=0&&numero<=9)
+	{
+		numero=prompt(" Error: vuelva a ingresar un numero del 0 a 9");
+	}
 
-{
-numero=prompt("ingrese un numero vàlido");
-num=paseInt(num);
-
-}
+	document.getElementById("Numero").value=numero;
+	console.log(numero);
 }//FIN DE LA FUNCIÓN

@@ -1,18 +1,11 @@
 function Mostrar()
 {
-	alert('iteración while');
+	var numero=0;
 
-var num=0;
-while (num<100)
-
-{
-
-	num=prompt("");
-	document.write("*" +"</br>");
-	++num;
-	
-	
-	
-}
+	while (numero<10)
+	{
+		numero++;
+		console.log (numero);
+	}
 
 }//FIN DE LA FUNCIÓN
