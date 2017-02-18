@@ -1,20 +1,17 @@
 function Mostrar()
 {
 
-	var contador=0;
-	var acumulador=0;
-	var numero;
+	var filas=0;
+	var columnas=0;
+	var contadorfilas=document.getElementById("suma").value;
+	var contadorcolumnas=document.getElementById("promedio").value;
 
-while (contador<5)
+	while(filas>contadorfilas)
 { 
-contador++;
-numero=prompt("");
-numero=parseInt(numero);
-acumulador+=numero;
-
-
+	contadorfilas++;
+	document.write("*"+ "</br>");
  }
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/5;
- 
+
+
+
 }//FIN DE LA FUNCIÓN

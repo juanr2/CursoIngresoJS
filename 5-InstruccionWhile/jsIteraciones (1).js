@@ -3,13 +3,15 @@ function Mostrar()
 	alert('iteración while');
 
 var num=0;
-while (num<10)
+while (num<100)
 
 {
 
-	
-	console.log(num);
+	num=prompt("");
+	document.write("*" +"</br>");
 	++num;
+	
+	
 	
 }
 

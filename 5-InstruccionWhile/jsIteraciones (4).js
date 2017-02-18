@@ -7,6 +7,7 @@ while (numero>=0&&numero<=9)
 
 {
 numero=prompt("ingrese un numero vàlido");
+num=paseInt(num);
 
 }
 }//FIN DE LA FUNCIÓN
