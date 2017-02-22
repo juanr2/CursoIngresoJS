@@ -1,27 +1,18 @@
-function Mostrar()
-{
-    var numeros=0;
-    parseInt("numeros");
-    var cantidadacumulada;
+function Mostrar() {
+    //var numero = 0;
+    var cantidadacumulada = 0;
     var promedio;
-    
+    var i = 0;
 
-
-    while(numeros<5)
-
-    {
-        numeros++;
-        numeros=prompt("ingrese un numero");
-        console.log(numeros);
-
+    while (i++ < 5) {
+        var num = prompt("ingrese un numero");
+        cantidadacumulada += parseInt(num);
     }
-        cantidadacumulada+=numeros;
-        promedio=cantidadacumulada/5;
+    
+    promedio = cantidadacumulada / 5;
 
-
-
-    document.getElementById("suma").value=cantidadacumulada;
-    document.getElementById("promedio").value=promedio;
+    document.getElementById("suma").value = cantidadacumulada;
+    document.getElementById("promedio").value = promedio;
 
 
 
