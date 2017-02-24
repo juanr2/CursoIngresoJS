@@ -1,31 +1,35 @@
 function Mostrar()
 {
-    var numero;
-    var respuesta="si";
+    var numero=0;
+    numero=parseInt(numero);
     var cantidadacumulada=0;
     var promedio;
-    var contador;
+    promedio=parseInt(promedio);
+    var contador=0;
 
 
-    while(respuesta!=si)
+    while(numero!="si")
     {
          contador++;
          numero=parseInt(numero);
 
         numero=prompt("ingrese numeros");
-        cantidadacumulada +=parseInt(numero);
-       
-        respuesta=confirm("salir");
+        cantidadacumulada+=numero;
+
+        if (numero=="si")
+        {
+            break;
+        }
+
+
+
 
     }
-
     promedio=cantidadacumulada/contador;
 
 
-    document.getElementById("suma").value=cantidadacumulada;
-    document.getElementById("promedio").value=promedio;
- 
-
+console.log(cantidadacumulada);
+console.log(promedio);
 
 
 
