@@ -1,28 +1,37 @@
 function Mostrar()
 {
     var numero;
-    var respuesta=true;
-    positivo=0;
+    var positivo=0;
+    var negativo=1;
+    var respuesta;
+   
+    
 
-    while(respuesta!=true)
+    while(respuesta!="si")
 
-    {
-        numero=prompt("ingrese un numero");
-
+    { 
+        numero=parseInt(prompt("ingrese un numero"));
+        respuesta=prompt("desea salir");
+        
         if (numero>0)
-        {  
+        
+        {
 
-        positivo+=parseInt(numero);
-       }
+            positivo+=numero;
+        }
 
-       else
-{   
-      producto=numero*numero;
+        else
 
-}
+        {
+          negativo*=numero;
+            
+        }
+
+
+
+
     }
-	
 
     document.getElementById("suma").value=positivo;
-    document.getElementById("producto").value=producto;
+    document.getElementById("producto").value=negativo;
 }//FIN DE LA FUNCIÓN

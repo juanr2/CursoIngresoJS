@@ -1,35 +1,41 @@
 function Mostrar()
 {
+	var num;
+	var rta;
+	var cantneg=0;
+	var sumaneg=0;
+	var promneg,prompos;
+	var sumapos=1;
+	var pares;
+	var dif;
+	var cantpos=1;
 
-	var contador=0;
-	//declarar contadores y variables 
-	
-	var respuesta="si";
-	var numero;
-	var positivos;
-	var negativos;
-	var acum;
-
-	while(respuesta!="no")
+	while(rta!="si")
 	{
-		
-		contador++;
-		numero=prompt("ingrese numeros");
-		numero=parseInt(numero);
+		num=parseInt(prompt("Ingrese un numero"));
+		rta=prompt("¿Desea salir de la aplicación?");
 
+		if(num<0)
 
-		if (numero>0)
+		{
+			cantneg++;
+			sumaneg+=num;
+			promneg=sumaneg/cantneg;
 
-		{ 
-		 acum+=numero;
-		 alert(acum);
 		}
-
-		
-	
+		else
+		{
+			cantpos++;
+			sumapos+=num;
+			prompos=sumapos/cantpos;
+		}
 	}
 
+		pares=num%2==0;
+		dif=sumapos-sumaneg;
 
-
-
-}//FIN DE LA FUNCIÓN
+	
+	document.write(cantneg," ",sumaneg," ",promneg," ",cantpos," ",sumapos," ",prompos," ",pares," ",dif);
+	
+	}
+//FIN DE LA FUNCIÓN
