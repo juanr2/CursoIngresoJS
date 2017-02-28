@@ -7,7 +7,69 @@ D.	Sueldo bruto, no menor a 8000.
 E.	Número de legajo, numérico de 4 cifras, sin ceros a la izquierda.
 F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para nacionalizados.
  */
-function ComenzarIngreso () 
-{
- 
+function ComenzarIngreso() {
+    var sexo;
+    var edad;
+    var estadocivil;
+    var sueldobruto = parseInt(sueldobruto);
+    var numerolegajo;
+
+    edad=prompt("ingrese su edad");
+
+    while (edad <= 18 || edad >= 90) 
+    
+    {
+        edad = prompt("ingrese una edad válida");
+    }
+    document.getElementById("Edad").value = edad;
+
+    sexo = prompt("ingrese sexo m o f");
+    while (sexo != "m" && sexo != "f") {
+        sexo = prompt("ingrese un sexo válido");
+    }
+    document.getElementById("Sexo").value = sexo;
+
+
+    estadocivil = prompt("ingrese un estado su estado civil");
+    while (estadocivil < 1 || estadocivil > 4) {
+        estadocivil = prompt("ingrese un estado civil válido");
+
+    }
+    switch(estadocivil)
+{ 
+    case 1: "soltero"
+    break;
+    case 2: "casado"
+    break;
+    case 3: "divorciado"
+    break;
+    default: "viudo"
+
 }
+
+document.getElementById("EstadoCivil").value=estadocivil;
+
+
+    sueldobruto = parseInt(prompt("ingrese un sueldo bruto"));
+    while (sueldobruto < 8000) {
+        sueldobruto = prompt("ingrese sueldo válido");
+    }
+    document.getElementById("Sueldo").value = sueldobruto;
+
+    numerolegajo=prompt("ingrese el numero de legajo");
+    while(numerolegajo<1000||numero>9999)
+
+    {
+       numerolegajo= prompt("ingrese un numero de legajo válido");
+    }
+    document.getElementById("Legajo").value=numerolegajo;
+
+    nacionalidad=prompt("ingre su nacionalidad");
+    while(nacionalidad<1||nacionalidad>3)
+    {
+        nacionalidad=prompt("ingrese nacionalidad válida");
+    }
+    document.getElementById("Nacionalidad").value=nacionalidad;
+
+}
+

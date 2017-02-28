@@ -4,9 +4,9 @@ function Mostrar()
 	var rta;
 	var cantneg=0;
 	var sumaneg=0;
-	var promneg,prompos;
-	var sumapos=1;
-	var pares;
+	var promneg=0,prompos=0;
+	var sumapos=0;
+	var pares=0;
 	var dif;
 	var cantpos=1;
 
@@ -29,13 +29,16 @@ function Mostrar()
 			sumapos+=num;
 			prompos=sumapos/cantpos;
 		}
+
+		if(num%2==0){
+           pares++;
+		}
 	}
 
-		pares=num%2==0;
-		dif=sumapos-sumaneg;
-
 	
-	document.write(cantneg," ",sumaneg," ",promneg," ",cantpos," ",sumapos," ",prompos," ",pares," ",dif);
+		dif=sumapos-sumaneg;
+	
+	document.write("cant.neg:" + cantneg + " .suma neg: " + sumaneg + ". prom.neg: "+ promneg + ".cant pos: " + cantpos + ",sum pos: " + sumapos + ". prom pos: " + prompos + "cant pares: " + pares + " .dif:" + dif);
 	
 	}
 //FIN DE LA FUNCIÓN
