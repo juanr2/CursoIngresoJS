@@ -11,22 +11,22 @@ function ComenzarIngreso() {
     var sexo;
     var edad;
     var estadocivil;
-    var sueldobruto = parseInt(sueldobruto);
+    var sueldobruto = 0;
     var numerolegajo;
 
-    edad=prompt("ingrese su edad");
+    edad = prompt("ingrese su edad");
 
-    while (edad <= 18 || edad >= 90) 
-    
-    {
+    while (edad <= 18 || edad >= 90) {
         edad = prompt("ingrese una edad válida");
     }
+
     document.getElementById("Edad").value = edad;
 
     sexo = prompt("ingrese sexo m o f");
     while (sexo != "m" && sexo != "f") {
         sexo = prompt("ingrese un sexo válido");
     }
+
     document.getElementById("Sexo").value = sexo;
 
 
@@ -35,19 +35,24 @@ function ComenzarIngreso() {
         estadocivil = prompt("ingrese un estado civil válido");
 
     }
-    switch(estadocivil)
-{ 
-    case 1: "soltero"
-    break;
-    case 2: "casado"
-    break;
-    case 3: "divorciado"
-    break;
-    default: "viudo"
 
-}
+    var ect;
+    switch (estadocivil) {
+        case "1":
+            ect = "soltero";
+            break;
+        case 2:
+            ect = "casado";
+            break;
+        case 3:
+            ect = "divorciado";
+            break;
+        default:
+            ect = "viudo";
 
-document.getElementById("EstadoCivil").value=estadocivil;
+    }
+
+    document.getElementById("EstadoCivil").value = ect;
 
 
     sueldobruto = parseInt(prompt("ingrese un sueldo bruto"));
@@ -56,20 +61,29 @@ document.getElementById("EstadoCivil").value=estadocivil;
     }
     document.getElementById("Sueldo").value = sueldobruto;
 
-    numerolegajo=prompt("ingrese el numero de legajo");
-    while(numerolegajo<1000||numero>9999)
-
-    {
-       numerolegajo= prompt("ingrese un numero de legajo válido");
+    numerolegajo = prompt("ingrese el numero de legajo");
+    while (numerolegajo < 1000 || numerolegajo > 9999) {
+        numerolegajo = prompt("ingrese un numero de legajo válido");
     }
-    document.getElementById("Legajo").value=numerolegajo;
+    document.getElementById("Legajo").value = numerolegajo;
 
-    nacionalidad=prompt("ingre su nacionalidad");
-    while(nacionalidad<1||nacionalidad>3)
-    {
-        nacionalidad=prompt("ingrese nacionalidad válida");
+    nacionalidad = prompt("ingre su nacionalidad");
+    while (nacionalidad < 1 || nacionalidad > 3) {
+        nacionalidad = prompt("ingrese nacionalidad válida");
     }
-    document.getElementById("Nacionalidad").value=nacionalidad;
+
+
+    switch (nacionalidad) {
+        case "1":
+            ect = "arg";
+            break;
+        case "2":
+            ect = "bol";
+            break;
+      
+
+    }
+    document.getElementById("Nacionalidad").value = ect;
 
 }
 
